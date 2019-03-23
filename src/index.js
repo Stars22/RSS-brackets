@@ -9,7 +9,7 @@ module.exports = function check(str, bracketsConfig) {
   let attempt = 1;
   while (attempt){
      for (let j = 0; j < arrayOfStringConfig.length; j++) {
-       if (str.indexOf(arrayOfStringConfig[j]) > -1) {
+       if (str.includes(arrayOfStringConfig[j])) {
          str = str.replace(arrayOfStringConfig[j], '');
          attempt++;
        }
